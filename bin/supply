@@ -8,6 +8,11 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+echo "BIN_DIR:: "$BIN_DIR""
+echo "ROOT_DIR:: "$ROOT_DIR""
+echo "CACHE_DIR:: "$BUILD_DIR""
+echo "ENV_DIR:: "$ENV_DIR""
+
 echo "Installing Datadog Puppy Agent, Dogstatsd and Trace Agent"
 
 mkdir -p $BUILD_DIR/datadog/scripts
