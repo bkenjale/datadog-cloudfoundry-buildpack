@@ -11,6 +11,7 @@ ENV_DIR=$3
 echo "BIN_DIR: "$BIN_DIR""
 echo "ROOT_DIR: "$ROOT_DIR""
 echo "BUILD_DIR: "$BUILD_DIR""
+echo "CACHE_DIR: "$CACHE_DIR""
 echo "ENV_DIR: "$ENV_DIR""
 
 echo "       Installing Datadog Puppy Agent, Dogstatsd and Trace Agent"
