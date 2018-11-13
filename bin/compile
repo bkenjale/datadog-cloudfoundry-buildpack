@@ -8,6 +8,12 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+echo "BIN_DIR: "$BIN_DIR""
+echo "ROOT_DIR: "$ROOT_DIR""
+echo "BUILD_DIR: "$BUILD_DIR""
+echo "CACHE_DIR: "$CACHE_DIR""
+echo "ENV_DIR: "$ENV_DIR""
+
 echo "       Installing Datadog Puppy Agent, Dogstatsd and Trace Agent"
 
 mkdir -p $BUILD_DIR/datadog/scripts
@@ -21,6 +27,10 @@ fi
 if [ -f $ROOT_DIR/lib/dogstatsd ]; then
   cp $ROOT_DIR/lib/dogstatsd $BUILD_DIR/datadog/dogstatsd
 fi
+
+echo "Printing all the files under "$ROOT_DIR""
+find $ROOT_DIR -type f
+
 cp $ROOT_DIR/lib/trace-agent $BUILD_DIR/datadog/trace-agent
 cp $ROOT_DIR/lib/scripts/get_tags.py $BUILD_DIR/datadog/scripts/get_tags.py
 cp -r $ROOT_DIR/lib/run-datadog.sh $BUILD_DIR/.profile.d/run-datadog.sh
