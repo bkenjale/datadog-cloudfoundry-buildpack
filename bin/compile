@@ -28,6 +28,7 @@ if [ -f $ROOT_DIR/lib/dogstatsd ]; then
   cp $ROOT_DIR/lib/dogstatsd $BUILD_DIR/datadog/dogstatsd
 fi
 
+ls -lrt $ROOT_DIR
 echo "Printing all the files under "$ROOT_DIR""
 find $ROOT_DIR -type f
 
